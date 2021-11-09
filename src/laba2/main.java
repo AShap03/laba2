@@ -100,15 +100,16 @@ public class main extends JFrame {
         addRadioButtonM("MEM2", 2);
         addRadioButtonM("MEM3", 3);
         radioButtonsM.setSelected(radioButtonsM.getElements().nextElement().getModel(), true);
+
         hboxMemRB.add(Box.createHorizontalGlue());
 
-        JLabel labelForX = new JLabel("X:");
+        JLabel labelForX = new JLabel("X:", JLabel.LEFT);
         textFieldX = new JTextField("0", 10);
         textFieldX.setMaximumSize(textFieldX.getPreferredSize());
-        JLabel labelForY = new JLabel("Y:");
+        JLabel labelForY = new JLabel("Y:", JLabel.CENTER);
         textFieldY = new JTextField("0", 10);
         textFieldY.setMaximumSize(textFieldY.getPreferredSize());
-        JLabel labelForZ = new JLabel("Z:");
+        JLabel labelForZ = new JLabel("Z:", JLabel.RIGHT);
         textFieldZ = new JTextField("0", 10);
         textFieldZ.setMaximumSize(textFieldZ.getPreferredSize());
 
@@ -138,19 +139,23 @@ public class main extends JFrame {
         hboxMem.add(Box.createHorizontalStrut(30));
 
         Box hboxVariables = Box.createHorizontalBox();
-        hboxVariables.add(Box.createHorizontalGlue());
+//        hboxVariables.add(Box.createHorizontalGlue());
         hboxVariables.add(labelForX);
-        hboxVariables.add(Box.createHorizontalStrut(10));
+//        hboxVariables.add(Box.createHorizontalStrut(10));
         hboxVariables.add(textFieldX);
-        hboxVariables.add(Box.createHorizontalStrut(80));
+        hboxVariables.add(Box.createHorizontalGlue());
+//        hboxVariables.add(Box.createHorizontalStrut(80));
         hboxVariables.add(labelForY);
-        hboxVariables.add(Box.createHorizontalStrut(10));
+//        hboxVariables.add(Box.createHorizontalStrut(10));
         hboxVariables.add(textFieldY);
-        hboxVariables.add(Box.createHorizontalStrut(80));
+        hboxVariables.add(Box.createHorizontalGlue());
+//        hboxVariables.add(Box.createHorizontalStrut(80));
         hboxVariables.add(labelForZ);
-        hboxVariables.add(Box.createHorizontalStrut(10));
+//        hboxVariables.add(Box.createHorizontalStrut(10));
         hboxVariables.add(textFieldZ);
-        hboxVariables.add(Box.createHorizontalStrut(60));
+
+//        hboxVariables.add(Box.createHorizontalStrut(60));
+
 
         Box hboxImage = Box.createHorizontalBox();
         labelImage = new JLabel("");
